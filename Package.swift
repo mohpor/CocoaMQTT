@@ -12,8 +12,8 @@ let package = Package(
     targets: [
         .target(
             name: "CocoaMQTT",
-            path: "Source",
             dependencies: ["CocoaAsyncSocket"],
+            path: "Source",            
             exclude: ["CocoaMQTTWebSocket.swift"]            
         )
     ],

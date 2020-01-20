@@ -6,10 +6,14 @@ let package = Package(
     products: [
         .library(name: "CocoaMQTT", targets: ["CocoaMQTT"])
     ],
+    dependencies: [
+        .package(url: "https://github.com/mohpor/CocoaAsyncSocket", .branch("master")),
+    ],
     targets: [
         .target(
             name: "CocoaMQTT",
             path: "Source",
+            dependencies: ["CocoaAsyncSocket"],
             exclude: ["CocoaMQTTWebSocket.swift"]            
         )
     ],
